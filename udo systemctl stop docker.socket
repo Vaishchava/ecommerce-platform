@@ -1,0 +1,32 @@
+[0;1;31m×[0m docker.socket - Docker Socket for the API
+     Loaded: loaded (/lib/systemd/system/docker.socket; enabled; vendor preset: enabled)
+     Active: [0;1;31mfailed[0m (Result: exit-code) since Sat 2026-06-27 11:51:06 IST; 37s ago
+   Triggers: ● docker.service
+     Listen: /run/docker.sock (Stream)
+
+Jun 27 11:51:06 Vaishnav systemd[1]: Starting Docker Socket for the API...
+Jun 27 11:51:06 Vaishnav systemd[981]: [0;1;31m[0;1;39m[0;1;31mdocker.socket: Failed to resolve group docker: No such process[0m
+Jun 27 11:51:06 Vaishnav systemd[1]: [0;1;39m[0;1;31m[0;1;39mdocker.socket: Control process exited, code=exited, status=216/GROUP[0m
+Jun 27 11:51:06 Vaishnav systemd[1]: [0;1;38;5;185m[0;1;39m[0;1;38;5;185mdocker.socket: Failed with result 'exit-code'.[0m
+Jun 27 11:51:06 Vaishnav systemd[1]: [0;1;31m[0;1;39m[0;1;31mFailed to listen on Docker Socket for the API.[0m
+
+[0;1;32m●[0m containerd.service - containerd container runtime
+     Loaded: loaded (/lib/systemd/system/containerd.service; enabled; vendor preset: enabled)
+     Active: [0;1;32mactive (running)[0m since Sat 2026-06-27 11:46:31 IST; 5min ago
+       Docs: https://containerd.io
+   Main PID: 325 (containerd)
+      Tasks: 15
+     Memory: 64.2M
+     CGroup: /system.slice/containerd.service
+             └─325 /usr/bin/containerd
+
+Jun 27 11:46:31 Vaishnav containerd[325]: time="2026-06-27T11:46:31.901960794+05:30" level=info msg="loading plugin" id=io.containerd.tracing.processor.v1.otlp type=io.containerd.tracing.processor.v1
+Jun 27 11:46:31 Vaishnav containerd[325]: time="2026-06-27T11:46:31.902024413+05:30" level=info msg="skip loading plugin" error="skip plugin: tracing endpoint not configured" id=io.containerd.tracing.processor.v1.otlp type=io.containerd.tracing.processor.v1
+Jun 27 11:46:31 Vaishnav containerd[325]: time="2026-06-27T11:46:31.902038860+05:30" level=info msg="loading plugin" id=io.containerd.internal.v1.tracing type=io.containerd.internal.v1
+Jun 27 11:46:31 Vaishnav containerd[325]: time="2026-06-27T11:46:31.902066301+05:30" level=info msg="skip loading plugin" error="skip plugin: tracing endpoint not configured" id=io.containerd.internal.v1.tracing type=io.containerd.internal.v1
+Jun 27 11:46:31 Vaishnav containerd[325]: time="2026-06-27T11:46:31.902080818+05:30" level=info msg="loading plugin" id=io.containerd.ttrpc.v1.otelttrpc type=io.containerd.ttrpc.v1
+Jun 27 11:46:31 Vaishnav containerd[325]: time="2026-06-27T11:46:31.902095726+05:30" level=info msg="loading plugin" id=io.containerd.grpc.v1.healthcheck type=io.containerd.grpc.v1
+Jun 27 11:46:31 Vaishnav containerd[325]: time="2026-06-27T11:46:31.903977057+05:30" level=info msg=serving... address=/run/containerd/containerd.sock.ttrpc
+Jun 27 11:46:31 Vaishnav containerd[325]: time="2026-06-27T11:46:31.904154648+05:30" level=info msg=serving... address=/run/containerd/containerd.sock
+Jun 27 11:46:31 Vaishnav containerd[325]: time="2026-06-27T11:46:31.904740016+05:30" level=info msg="containerd successfully booted in 0.078213s"
+Jun 27 11:46:31 Vaishnav systemd[1]: Started containerd container runtime.
